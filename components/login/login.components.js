@@ -42,16 +42,16 @@ async function login() {
                     loadingScreen();
                     window.location.href = '/index.html';
                } else {
-                   TimePassedData(key,message)
+                    TimePassedData(key, message)
                }
           } else {
-               CheckMailFailed(message,key)
+               CheckMailFailed(message, key)
           }
      }
 }
 
 function loadingScreen() {
-     let element=document.getElementById('loading');
+     let element = document.getElementById('loading');
      element.classList.toggle("d-none")
 }
 
@@ -60,7 +60,7 @@ function loadingScreen() {
  * @param {number} key 
  * @param {string} message 
  */
-function TimePassedData(key,message) {
+function TimePassedData(key, message) {
      inCorrect(message)
      if (USERS[key]) {
           if (USERS[key].userData.timepassed) {
@@ -78,7 +78,7 @@ function TimePassedData(key,message) {
  * @param {string} message 
  * @param {number} key 
  */
-function CheckMailFailed(message,key) {
+function CheckMailFailed(message, key) {
      inCorrect(message)
      if (USERS[key]) {
           if (user[key].userData.timepassed) {
@@ -190,14 +190,10 @@ async function keySettStrorage(key) {
 }
 
 async function guestLogin() {
-     
+
      contacts = [
-          { "name": "Benedikt Ziegler", "email": "benediktz@gmail.com", "phone": "+1234567", "contactId": "98765abc", "initials": "BZ", "color": "812731" },
-          { "name": "Anton Mayer", "email": "antom@gmail.com", "phone": "+1234567", "contactId": "12345abc", "initials": "AM", "color": "3e59c2" },
-          { "name": "Helena Eissele", "email": "helenae@gmail.com", "phone": "+1234567", "contactId": "97345oiu", "initials": "HE", "color": "2b3430" },
-          { "name": "Izak Abraham", "email": "izaka@gmail.com", "phone": "+1234567", "contactId": "12367oiu", "initials": "IA", "color": "907ee1" },
-          { "name": "Anja Schulz", "email": "anjas@gmail.com", "phone": "+1234567", "contactId": "12345ghf", "initials": "AS", "color": "3e59c2" },
-          { "name": "David Eisenberg", "email": "davide@gmail.com", "phone": "+1234567", "contactId": "12345oiu", "initials": "DE", "color": "4f98ce" }
+          { "name": "John Fieweger", "email": "john.fieweger98@gmail.com", "phone": "+1234567", "contactId": "98765abc", "initials": "BZ", "color": "812731" },
+          { "name": "Max Mustermann", "email": "maxmustermann@gmail.com", "phone": "+1234567", "contactId": "12345abc", "initials": "AM", "color": "3e59c2" },
      ];
      userData = { key: 0, name: 'Guest', email: 'GuestTest@hotmail.de', password: 'password', initials: 'G', failedAttemped: true };
      // initalize entry with key guest and empty value as an object
